@@ -39,21 +39,55 @@ ActiveRecord::Schema.define(version: 20131119182726) do
   end
 
   create_table "repos", force: true do |t|
+    t.string   "name"
+    t.string   "username"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "resources", force: true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.text     "description"
+    t.integer  "user_id_id"
+    t.integer  "gemm_id_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
+    t.string   "url"
+    t.string   "html_url"
+    t.string   "repos_url"
+    t.string   "gists_url"
+    t.string   "avatar_url"
+    t.integer  "public_repos"
+    t.integer  "followers"
+    t.integer  "following"
+    t.integer  "github_id"
+    t.string   "login"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "gravatar_id"
+    t.string   "followers_url"
+    t.string   "following_url"
+    t.string   "starred_url"
+    t.string   "subscriptions_url"
+    t.string   "organizations_url"
+    t.string   "events_url"
+    t.string   "received_events_url"
+    t.string   "type"
+    t.string   "site_admin"
+    t.string   "public_gists"
+    t.datetime "created_profile"
+    t.datetime "last_updated_at"
   end
 
   create_table "votes", force: true do |t|
+    t.integer  "up_votes"
+    t.integer  "down_votes"
+    t.integer  "user_id"
+    t.integer  "resource_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

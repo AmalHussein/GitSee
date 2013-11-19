@@ -1,5 +1,39 @@
 source 'https://rubygems.org'
 
+#ruby wrapper for Ruby Docs API Gem 
+gem 'gems'
+
+#oauth and api calls for github
+gem 'rest-client'
+
+#for github Api gem 
+gem "github_api"
+
+#for making easy HTTP requests
+gem 'httparty'
+
+#pry for rails
+gem 'pry-rails'
+
+# For API keys
+gem 'dotenv-rails'
+
+#for heroku deployment
+gem 'rails_12factor'
+
+#for annotating your models etc
+gem 'annotate'
+
+#for pry-debugging
+gem 'pry-debugger'
+
+#for unicorn server 
+gem 'unicorn'
+gem 'foreman'
+
+#for helping understand errors
+gem 'better_errors' 
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 

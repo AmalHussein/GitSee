@@ -1,0 +1,2 @@
+class GemmsController < ApplicationController
+end

@@ -8,22 +8,28 @@
   <% end %> 
 </div>
 
-<h1 id="repo-title"><%= @repo.repo_name %></h1>
+<h1 id="repo-title"><%= @repo.name %></h1>
+<div> 
+<%= @repo.gemms.each do |gemm| %>
 
-<% @gemm.each do |gem| %> 
+	<div>		<h2>		Name: <%= gemm.name %> </h2></div>
+			<div>				Downloads: <%=gemm.downloads %> </div>
+			<div>				Updated_at: <%= gemm.updated_at %> </div>
+			<div>				Downloads: <%= gemm.downloads %> </div>
+			<div>				Version: <%= gemm.version %> </div>
+			<div>				Project_url: <%= gemm.project_url %> </div>
+			<div>				Real_name: <%= gemm.real_name %> </div>
+				<div>			Version_downloads: <%= gemm.version_downloads %> </div>
+				<div>			gemm_uri: <%= gemm.gem_uri %>  </div>
+				<div>			Homepage_uri: <%= gemm.homepage_uri %> </div>
+					<div>		Wiki_uri: <%= gemm.wiki_uri %> </div>
+					<div>		Mailing_list_uri: <%= gemm.mailing_list_uri %> </div>
+					<div>		Source_code_uri: <%= gemm.source_code_uri %> </div>
+					<div>		Bug_tracker_uri: <%= gemm.bug_tracker_uri %>  </div>
 
-Name: <%= gem.name %>
-Downloads: <%=gem.downloads %>
-Updated_at: <%= gem.updated_at %>
-Downloads: <%= gem.downloads %>
-Version: <%= gem.version %>
-Project_url: <%= gem.project_url %>
-Real_name: <%= gem.real_name %> 
-Version_downloads: <%= gem.version_downloads %>
-Gem_uri: <%= gem.gem_uri %> 
-Homepage_uri: <%= gem.homepage_uri %> 
-Wiki_uri: <%= gem.wiki_uri %>
-Mailing_list_uri: <%= gem.mailing_list_uri %>
-Source_code_uri: <%= gem.source_code_uri %>
-Bug_tracker_uri: <%= gem.bug_tracker_uri %> 
-<% end %> 
+</div>
+
+<% end %>
+
+
+

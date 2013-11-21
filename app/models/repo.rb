@@ -1,6 +1,7 @@
 class Repo < ActiveRecord::Base
-		has_and_belongs_to_many :gemms
 		include HTTParty
+	has_and_belongs_to_many :gemms
+
 	# http://edgeguides.rubyonrails.org/active_record_callbacks.html
 	before_validation :parse_and_store_gemms
 
@@ -21,8 +22,7 @@ class Repo < ActiveRecord::Base
 	end
 
   def mine_gems
-  	binding.pry
-    url = "http://raw.github.com/#{repo_username}/#{repo_name}/master/Gemfile"
+    url = "http://raw.github.com/#{username}/#{name}/master/Gemfile"
     response = HTTParty.get(url)
     gemms = []
     begin

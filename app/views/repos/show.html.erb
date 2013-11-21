@@ -10,27 +10,12 @@
 
 <h1 id="repo-title"><%= @repo.name %></h1>
 
-<div class='gems'> 
-<%= @repo.gemms.each do |gemm| %>
-
-	<div>		<h2>		Name: <%= gemm.name %> </h2></div>
-			<div>				Downloads: <%=gemm.downloads %> </div>
-			<div>				Updated_at: <%= gemm.updated_at %> </div>
-			<div>				Downloads: <%= gemm.downloads %> </div>
-			<div>				Version: <%= gemm.version %> </div>
-			<div>				Project_url: <%= gemm.project_url %> </div>
-			<div>				Real_name: <%= gemm.real_name %> </div>
-				<div>			Version_downloads: <%= gemm.version_downloads %> </div>
-				<div>			gemm_uri: <%= gemm.gem_uri %>  </div>
-				<div>			Homepage_uri: <%= gemm.homepage_uri %> </div>
-					<div>		Wiki_uri: <%= gemm.wiki_uri %> </div>
-					<div>		Mailing_list_uri: <%= gemm.mailing_list_uri %> </div>
-					<div>		Source_code_uri: <%= gemm.source_code_uri %> </div>
-					<div>		Bug_tracker_uri: <%= gemm.bug_tracker_uri %>  </div>
-
+<div class="gems">
+  <h5>Gems</h5>
+  <%= render partial: "gemms/gemm", collection: @repo.gemms %>
 </div>
 
-<% end %>
+
 
 
 

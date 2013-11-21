@@ -12,6 +12,18 @@
 
 <% @gemm.each do |gem| %> 
 
-<%= gem.name %>
-<%=gem.d
+Name: <%= gem.name %>
+Downloads: <%=gem.downloads %>
+Updated_at: <%= gem.updated_at %>
+Downloads: <%= gem.downloads %>
+Version: <%= gem.version %>
+Project_url: <%= gem.project_url %>
+Real_name: <%= gem.real_name %> 
+Version_downloads: <%= gem.version_downloads %>
+Gem_uri: <%= gem.gem_uri %> 
+Homepage_uri: <%= gem.homepage_uri %> 
+Wiki_uri: <%= gem.wiki_uri %>
+Mailing_list_uri: <%= gem.mailing_list_uri %>
+Source_code_uri: <%= gem.source_code_uri %>
+Bug_tracker_uri: <%= gem.bug_tracker_uri %> 
 <% end %> 

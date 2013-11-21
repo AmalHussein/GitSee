@@ -9,7 +9,8 @@
 </div>
 
 <h1 id="repo-title"><%= @repo.name %></h1>
-<div> 
+
+<div class='gems'> 
 <%= @repo.gemms.each do |gemm| %>
 
 	<div>		<h2>		Name: <%= gemm.name %> </h2></div>

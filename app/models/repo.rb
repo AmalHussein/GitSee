@@ -1,6 +1,6 @@
 class Repo < ActiveRecord::Base
 		include HTTParty
-	has_and_belongs_to_many :gemms
+			has_and_belongs_to_many :gemms
 
 	# http://edgeguides.rubyonrails.org/active_record_callbacks.html
 	before_validation :parse_and_store_gemms

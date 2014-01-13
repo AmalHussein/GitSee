@@ -3,8 +3,8 @@
 GitSee.stateObj = { foo: "bar" };
 // history.pushState(stateObj, title, url);
 history.pushState(GitSee.stateObj, 
-                  "<%= @repo.repo_username %>" + ": " + "<%= @repo.repo_name %>" + " " + "documentation", 
-                  "/repo/" + "<%= @repo.repo_username %>" + "/" + "<%= @repo.repo_name %>");
+                  "<%= @repo.username %>" + ": " + "<%= @repo.name %>" + " " + "documentation", 
+                  "/repo/" + "<%= @repo.username %>" + "/" + "<%= @repo.name %>");
 
 $('#repo-title').html('<%= @repo.name %>');
 $('.gems').val('');

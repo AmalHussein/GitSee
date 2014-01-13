@@ -58,8 +58,8 @@ ActiveRecord::Schema.define(version: 20131119191739) do
     t.string   "name"
     t.string   "url"
     t.text     "description"
-    t.integer  "user_id_id"
-    t.integer  "gemm_id_id"
+    t.integer  "user_id"
+    t.integer  "gemm_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

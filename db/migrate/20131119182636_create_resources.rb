@@ -4,8 +4,8 @@ class CreateResources < ActiveRecord::Migration
     	t.string   		:name
 	    t.string   		:url
 	    t.text     		:description
-	    t.belongs_to  :user_id
-	    t.belongs_to 	:gemm_id
+	    t.belongs_to  :user
+	    t.belongs_to 	:gemm
       t.timestamps
     end
   end

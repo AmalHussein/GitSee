@@ -1,5 +1,5 @@
 
-<div class="gem" >
+<div class="gem" id='gem-<%= gemm.id %>'>
 
 	<div>		<h2>		Name: <%= gemm.name %> </h2></div>
 			<div>				Downloads: <%=gemm.downloads %> </div>
@@ -17,5 +17,18 @@
 					<div>		Bug_tracker_uri: <%= gemm.bug_tracker_uri %>  </div>
 		</div>
 
-
+  <div class="gem-resources">
+    <h3>Resources</h3>
+    <%#= render partial: "resources/resource", collection: gemm.resources %>
+  </div>
+  <div class="resource-form">
+    <%= form_for gemm.resources.build, url: create_resource_path, remote: true do |f| %>
+    <%#= f.hidden_field :gemm_id, value: gemm.id %>
+    <%= f.label :site_name %>
+    <%= f.text_field :site_name %>
+    <%= f.label :site_url %>
+    <%= f.text_field :site_url %>
+    <%= f.submit "New Link" %>
+    <% end %>
+  </div>
 </div> 

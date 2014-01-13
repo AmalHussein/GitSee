@@ -2,7 +2,7 @@ class ResourcesController < ApplicationController
 
 	def create
 		@resource = Resource.new(resource_params)
-		@resource.user = current_user
+		# @resource.user = current_user
 		if @resource.save
 			respond_to do |format|
 				format.js
